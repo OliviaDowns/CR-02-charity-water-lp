@@ -1,19 +1,303 @@
-/* charity: water Brand Colors & Fonts
+/*
+  charity: water Brand Colors & Fonts
 
-Primary Colors:
-- Yellow:     #FFC907
-- Blue:       #2E9DF7
+  Primary Colors:
+  - Yellow:     #FFC907
+  - Blue:       #2E9DF7
 
-Secondary Colors:
-- Light Blue: #8BD1CB
-- Green:      #4FCB53
-- Orange:     #FF902A
-- Red:        #F5402C
-- Dark Green: #159A48
-- Pink:       #F16061
+  Secondary Colors:
+  - Light Blue: #8BD1CB
+  - Green:      #4FCB53
+  - Orange:     #FF902A
+  - Red:        #F5402C
+  - Dark Green: #159A48
+  - Pink:       #F16061
 
-Fonts:
-- Proxima Nova
-- Avenir
-
+  Fonts:
+  - Proxima Nova
+  - Avenir
 */
+
+/* Set up the main font and background color for the page */
+body {
+  font-family: 'Proxima Nova', 'Avenir', Georgia; /* Added missing semicolon */
+  margin: 0;
+  padding: 0;
+  background: #fff7e1; /* light yellow background */
+  color: #1a1a1a; /* dark text for readability */
+}
+
+/* Style the top bar with logo and sign in button */
+.top-bar {
+  background-color: #77A8BB; /* changed to requested blue shade */
+  display: flex; /* use flexbox for layout */
+  justify-content: space-between; /* space between brand and buttons */
+  align-items: center; /* center items vertically */
+  padding: 12px 24px;
+  border-bottom: 1px solid #ddd; /* subtle bottom border */
+}
+
+/* Brand container holds logo and brand name side by side */
+.brand-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation buttons container */
+.nav-buttons {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo image size */
+.logo {
+  height: 32px;
+  width: auto;
+  margin-right: 8px; /* space between logo and brand name */
+}
+
+/* Brand name style - not bold */
+.brand-name {
+  font-family: 'Proxima Nova', 'Avenir', sans-serif;
+  font-size: 20px;
+  margin-left: 8px;
+  font-weight: normal; /* Not bold */
+}
+
+/* Sign In button style - not bold */
+.sign-in {
+  background-color: #FFC907; /* yellow */
+  border: none;
+  padding: 8px 16px;
+  font-weight: normal;       /* Not bold */
+  cursor: pointer;
+  height: 40px;              /* Match height with .donate-btn */
+  min-width: 90px;           /* Ensures similar width */
+  box-sizing: border-box;
+}
+
+/* Give 💧 button style - same size as Sign In */
+.donate-btn {
+  background-color: #fff;
+  border: 2px solid #FFC907;
+  color: #1a1a1a;
+  padding: 8px 16px;         /* Same padding as .sign-in */
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: normal;       /* Not bold */
+  cursor: pointer;
+  margin-left: 8px;
+  border-radius: 4px;
+  height: 40px;              /* Set a fixed height to match .sign-in */
+  min-width: 90px;           /* Ensures similar width */
+  box-sizing: border-box;    /* Makes sizing predictable */
+}
+
+/* Add hover effect for buttons */
+.sign-in:hover,
+.donate-btn:hover,
+.cta:hover {
+  background-color: #FFC907;
+  color: white;
+  transition: 0.3s ease;
+}
+
+/* Add hover effect for the call to action button */
+.cta:hover {
+  background-color: #BF6C46; /* brownish color on hover */
+  color: #fff; /* white text on hover */
+}
+
+/* Main hero section layout */
+.hero-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  flex-wrap: wrap; /* allows content to wrap on small screens */
+}
+
+/* Content area in the hero section */
+.hero-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+/* Main headline style */
+.hero-content h1 {
+  font-size: 50px;
+  line-height: 1.2;
+  color:#1a1a1a;
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
+
+/* Subheadline style */
+.subheadline {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  line-height: 1.5;
+  color:#1a1a1a
+  text-align: center;
+}
+
+/* Donation box styling */
+.donation-box {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  /* Center the donation box */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 350px; /* You can adjust this width if you want */
+}
+
+/* Toggle buttons for donation type */
+.toggle {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+/* Each toggle button */
+.toggle-btn {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #003366; /* blue border */
+  background-color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Active toggle button style */
+.toggle-btn.active {
+  background-color: #FFC907; /* brownish highlight */
+  color: white;
+  border: none;
+}
+
+/* Donation amount input area */
+.amount-input {
+  margin: 12px 0;
+}
+
+/* Donation input box style */
+.amount-input input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Call to action button style */
+.cta {
+  background-color: #FFC907; /* yellow */
+  color: #1a1a1a;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+/* Payment info text style */
+.payment-info {
+  font-size: 12px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Hero image style */
+.hero-bg {
+  background-image: url(img/Mother-and-child.jpg.jpg); /* use correct case + quotes */
+  background-size: cover;
+  width: 100% auto;
+  background-position: right top;
+
+  background-repeat: no-repeat;
+  padding: 60px 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 150vh;
+}
+
+/* Navigation bar styles for plain text items */
+.nav-links {
+  display: flex;
+  gap: 24px; /* space between nav items */
+}
+
+/* Each nav item uses the correct font and color */
+.nav-item {
+  color: #1a1a1a; /* dark text */
+  font-family: 'Proxima Nova', 'Avenir', Georgia;
+  font-size: 16px;
+  cursor: default; /* shows not clickable */
+  user-select: none; /* prevents text selection */
+  text-decoration: none; /* no underline */
+  padding: 4px 0;
+}
+
+/* Simple row layout for hero section */
+.hero-overlay {
+ 
+  display: flex;
+  padding: 20
+  px;
+  font-size: 14px;
+  border-radius: 8px;
+  max-width: 800px;
+  max-height: 400px;
+  
+}
+.hero-left {
+  flex: 1;
+  margin-top:-60px;
+}
+.hero-left h1 {
+  text-align: center;
+  color: #1a1a1a;
+  font-size: 60px;
+  margin-top: 20px;
+  line-height: 1.2;
+}
+
+
+.hero-left .subheadline {
+  color:#1a1a1a
+  text-align: center;
+  font-size: 20px;
+  margin: 10px auto;
+  max-width:800px;
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+
+/* Responsive: stack on small screens */
+@media screen and (max-width: 800px) 
+
+  .hero-bg {
+    background-position: center center;
+    background-size: cover;
+    padding: 40px 20px;
+  }
+
+  .hero-left h1 {
+  font-size: 28px;
+  }
+.hero-left .subheadline {
+  font-size: 16px;
+
+}
+
+  /* Move .donation-box out of .hero-row and add margin for small screens */
+  .donation-box {
+    margin-top: 20px;
+  }

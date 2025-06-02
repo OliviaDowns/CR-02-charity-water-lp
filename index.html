@@ -1,12 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Charity: Water Landing Page</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
+
 <body>
-    <!-- Add your HTML here -->
+
+  <!-- Header section with logo, navigation, and buttons -->
+  <header class="top-bar">
+    <div class="brand-container">
+      <!-- Logo image for the brand -->
+      <img src="img/water-can-transparent.png" alt="charity: water logo" class="logo" />
+      <!-- Brand name with a smaller font size and margin for spacing -->
+      <span class="brand-name" style="font-size: 16px; margin-left: 8px;">charity: water</span>
+    </div>
+
+    <!-- Navigation bar with no dropdown lists, just plain text items -->
+    <nav class="nav-links">
+      <!-- Take Action (no dropdown) -->
+      <span class="nav-item">Take Action <span class="arrow">&#9660;</span></span>
+      <!-- About Us (no dropdown) -->
+      <span class="nav-item" style="margin-left: 32px;">About Us <span class="arrow">&#9660;</span></span>
+      <!-- Why Water (no dropdown) -->
+      <span class="nav-item" style="margin-left: 32px;">Why Water?</span>
+    </nav>
+
+    <!-- Navigation buttons for sign in and donate -->
+    <div class="nav-buttons">
+      <!-- Sign In button, not bold -->
+      <button class="sign-in">Sign In</button>
+      <!-- Give 💧 button, same size as Sign In -->
+      <button class="donate-btn">Give 💧</button>
+    </div>
+  </header>
+
+<main class="hero-bg">
+  <div class="hero-overlay">
+    <div class="hero-left">
+        <h1>Be the Reason a Family Drinks Clean Water Today</h1>
+        <!-- Subheadline for impact OUTSIDE the donation box -->
+        <p class="subheadline">
+          <!-- Highlighted number in a different color for emphasis -->
+          <strong style="color:#BF6C46;">703 million</strong> people still live without clean water. Your monthly or one-time donation funds local solutions and with 100% going to the field, you’ll see exactly where your impact lands.
+        </p>
+
+        <!-- Donation box starts here -->
+        <div class="donation-box">
+          <!-- Toggle buttons for donation type -->
+          <div class="toggle">
+            <button class="toggle-btn inactive" id="give-once-btn" onclick="setActive('give-once-btn', 'monthly-btn')">Give Once</button>
+            <button class="toggle-btn active" id="monthly-btn" onclick="setActive('monthly-btn', 'give-once-btn')">Monthly</button>
+          </div>
+
+          <!-- Input for donation amount (centered) -->
+          <div class="amount-input" style="text-align: center;">
+            <label for="donation">Pick your amount to help fund clean water</label>
+            <input type="number" id="donation" placeholder="$" style="margin: 10px auto; display: block; width: 80%;" />
+          </div>
+
+          <!-- Call to action button -->
+          <button class="cta">Make a Lasting Impact Today!</button>
+          <!-- Payment info text -->
+          <p class="payment-info">Fast secure checkout with Apple Pay, PayPal, or card</p>
+        </div>
+      </div>
+    </div>
+
+   
+
+  </main>
+
+  <!-- Optional: Donation anchor for navigation -->
+  <section id="donate" class="donate-anchor"></section>
+
+  <!-- Simple script to switch button color for beginners -->
+  <script>
+    // This function changes the button colors when clicked
+    function setActive(activeId, inactiveId) {
+      const activeBtn = document.getElementById(activeId);
+      const inactiveBtn = document.getElementById(inactiveId);
+      activeBtn.classList.add('active');
+      activeBtn.classList.remove('inactive');
+      inactiveBtn.classList.remove('active');
+      inactiveBtn.classList.add('inactive');
+    }
+  </script>
 </body>
 </html>
+
